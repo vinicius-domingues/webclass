@@ -12,7 +12,6 @@ export function detalhesCompra(produto: Produto, pagamento: FormaPagamento): str
     return `Produto: ${produto.nome} tem o preço de R$${produto.preco} (${produto.categoria}) se pago via ${pagamento}.`;
 }
 
-// Exemplo de uso
 const produto: Produto = {
     nome: 'Camiseta Lacoste',
     preco: 199.99,
