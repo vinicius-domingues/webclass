@@ -1,25 +1,25 @@
-async function buscarDadosDaAPI(): Promise<string> {
-    // Simulamos uma chamada a uma API com um atraso usando setTimeout
+async function buscaAPI(): Promise<string> {
+    
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            const sucesso = Math.random() > 0.5;  // Simula 50% de chance de sucesso
+            const sucesso = Math.random() > 0.9;  
 
             if (sucesso) {
-                resolve('Dados recebidos da API');
+                resolve('SUCESSO');
             } else {
-                reject('Falha ao buscar dados da API');
+                reject('FALHA');
             }
-        }, 2000);  // Simula um atraso de 2 segundos
+        }, 2000);  
     });
 }
 
-async function executarBusca() {
+async function executaBusca() {
     try {
-        const dados = await buscarDadosDaAPI();  // Aguarda a resposta da API
-        console.log(dados);  // Exibe os dados recebidos
+        const dados = await buscaAPI();  
+        console.log(dados);  
     } catch (error) {
         // Captura e exibe erros
-        console.error('Erro ao buscar dados:', error);
+        console.error('ERRO AO BUSCAR', error);
     }
 }
 

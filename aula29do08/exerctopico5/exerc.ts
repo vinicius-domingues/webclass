@@ -1,6 +1,6 @@
-function encontrarMaiorElemento<T>(array: T[]): T {
+function achaMaior<T>(array: T[]): T {
     if (array.length === 0) {
-        throw new Error('O array não pode estar vazio.');
+        throw new Error('O array não pode ser nulo.');
     }
 
     let maiorElemento: T = array[0];
@@ -14,8 +14,8 @@ function encontrarMaiorElemento<T>(array: T[]): T {
     return maiorElemento;
 }
 
-const maiorNumero = encontrarMaiorElemento([10, 20, 30]);  // 30
-const maiorPalavra = encontrarMaiorElemento(['gato', 'elefante', 'zebra']);  // 'zebra'
+const numero = achaMaior([1, 2, 3]);
+const palavra = achaMaior(['abelha', 'cachorro', 'dromedário']);
 
-console.log(`Maior número: ${maiorNumero}`);
-console.log(`Maior palavra: ${maiorPalavra}`);
+console.log(`Maior número: ${numero}`);
+console.log(`Maior palavra: ${palavra}`);
